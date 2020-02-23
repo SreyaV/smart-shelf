@@ -3,7 +3,7 @@
 #include "wifi_functions.h"
 #include <ArduinoJson.h>
 
-StaticJsonDocument<500> doc;
+StaticJsonDocument<700> doc;
 char params[200];
 
 void setup() {
@@ -28,6 +28,10 @@ void loop() {
     return;
   }
   String weather = doc["weather"]["main"];
-  Serial.println(weather);
+  if (weather.contains("rain") || weather.contains("Rain")){
+    // Send notification for umbrella
+    
+  }
+  
   delay(10000);
 }
