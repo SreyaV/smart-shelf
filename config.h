@@ -2,8 +2,8 @@
 #define CONFIG_H
 
 // Server URL
-char URL[] = "http://65ac765d.ngrok.io/post";
-char HOST[] = "http://65ac765d.ngrok.io";
+char URL[] = "http://api.openweathermap.org/data/2.5/weather";
+char HOST[] = "http://api.openweathermap.org";
 
 // Wifi constants
 char NETWORK[] = "stratus";  // SSID for Wifi Network
@@ -16,5 +16,6 @@ char body[600];
 
 // weather
 char id[] = "4930956";
+char api[] = "03f0991b65eae61e742929f915a22670";
 
 #endif
