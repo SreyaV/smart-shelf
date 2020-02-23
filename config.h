@@ -5,6 +5,9 @@
 char URL[] = "http://api.openweathermap.org/data/2.5/weather";
 char HOST[] = "http://api.openweathermap.org";
 
+char POSTURL[] = ""; //put server ngrok here
+char POSTHOST[] = ""; //put server ngrok here
+
 // Wifi constants
 char NETWORK[] = "stratus";  // SSID for Wifi Network
 char PASSWORD[] = "jeremysux"; // Password for Wifi Networkbvg

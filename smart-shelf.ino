@@ -21,17 +21,20 @@ void loop() {
 
   // Deserialize the weather data
   DeserializationError error = deserializeJson(doc, responseBuffer);
-    // Test if parsing succeeds.
+  // Test if parsing succeeds.
   if (error) {
     Serial.print(F("deserializeJson() failed: "));
     Serial.println(error.c_str());
     return;
   }
-  String weather = doc["weather"]["main"];
-  if (weather.contains("rain") || weather.contains("Rain")){
+  char[] weather = doc["weather"]["main"];
+  if (strstr(weather, "rain") != NULL || strstr(weather, "Rain") != NULL) {
     // Send notification for umbrella
-    
+    // Sends message to online server
+    sprintf(body, "Rain predicted. Take umbrella off the shelf");
+    http_post(body, requestBuffer, responseBuffer);
   }
+
   
   delay(10000);
 }
