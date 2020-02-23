@@ -23,11 +23,11 @@ void loop() {
   DeserializationError error = deserializeJson(doc, responseBuffer);
   // Test if parsing succeeds.
   if (error) {
-    Serial.print(F("deserializeJson() failed: "));
+    Serial.print(("deserializeJson() failed: "));
     Serial.println(error.c_str());
     return;
   }
-  char[] weather = doc["weather"]["main"];
+  const char* weather = doc["weather"]["main"];
   if (strstr(weather, "rain") != NULL || strstr(weather, "Rain") != NULL) {
     // Send notification for umbrella
     // Sends message to online server
