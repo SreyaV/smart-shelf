@@ -12,7 +12,7 @@ const int RESPONSE_TIMEOUT = 13000; //ms to wait for response from host
 const uint16_t OUT_BUFFER_SIZE = 9000; //size of buffer to hold HTTP response
 
 void setup_wifi() {
-  WiFi.begin("stratus", "jeremysux");
+  WiFi.begin("iPhone", "password");
 
   Serial.print("Connecting");
   while (WiFi.status() != WL_CONNECTED)
